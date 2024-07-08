@@ -21,6 +21,9 @@
 
 <body>
     <div class="main-container">
+        <div id="preloader">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
 
         <!-- Main header -->
         <header class="main-header">
@@ -380,6 +383,10 @@
         window.addEventListener("scroll", () => {
             const mainNav = document.querySelector(".main-header__navbar");
             mainNav.classList.toggle("active", window.scrollY > 0);
+        });
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
         });
     </script>
 </body>
